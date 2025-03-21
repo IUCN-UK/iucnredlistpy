@@ -8,7 +8,9 @@ authors = [
     { name = "Ian Townsend", email = "ian.townsend@iucn.org" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "ruff>=0.11.2",
+]
 
 [build-system]
 requires = ["hatchling"]
