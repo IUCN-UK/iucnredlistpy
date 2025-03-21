@@ -1,0 +1,15 @@
+[project]
+name = "iucnredlistpy"
+version = "0.1.0"
+description = "IUCN Red List Python package"
+readme = "README.md"
+authors = [
+    { name = "Simon Tarr", email = "simon.tarr@iucn.org" },
+    { name = "Ian Townsend", email = "ian.townsend@iucn.org" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
