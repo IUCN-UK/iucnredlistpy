@@ -83,7 +83,7 @@ Initialize the client
 import iucnredlistpy
 
 client = iucnredlistpy.Client(api_key="your_red_list_api_key")
-client.get_biogeographical_realms.all()
+client.biogeographical_realms.list()
 ```
 
 ## Development

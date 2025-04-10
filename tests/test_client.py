@@ -21,5 +21,5 @@ def test_get_biogeographical_realms(requests_mock):
 
     requests_mock.get(mock_url, json=mock_response)
 
-    result = client.biogeographical_realms.all()
+    result = client.biogeographical_realms.list()
     assert result == mock_response

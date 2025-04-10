@@ -6,7 +6,7 @@ class Resource:
         self.client = client
         self.resource_name = resource_name
 
-    def all(self):
+    def list(self):
         url = f"{API_BASE}{self.resource_name}"
         response = self.client.session.get(url)
         if response.ok:
