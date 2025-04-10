@@ -5,7 +5,7 @@ def test_get_biogeographical_realms(requests_mock):
     api_key = "fake-api-key"
     client = iucnredlistpy.Client(api_key=api_key)
 
-    mock_url = f"https://api.iucnredlist.org/api/v4/biogeographical_realms"
+    mock_url = "https://api.iucnredlist.org/api/v4/biogeographical_realms"
     mock_response = {
         "biogeographical_realms": [
             {"description": {"en": "Afrotropical"}, "code": "0"},
