@@ -1,4 +1,2 @@
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyc
+src/iucnredlistpy/__pycache__/
+tests/__pycache__/
