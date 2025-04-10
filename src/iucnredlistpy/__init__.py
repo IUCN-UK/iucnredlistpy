@@ -1,2 +1,3 @@
-def hello() -> str:
-    return "Hello from iucnredlistpy!"
+from .client import IUCNRedListClient
+
+__all__ = ["IUCNRedListClient"]
