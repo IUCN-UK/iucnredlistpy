@@ -77,3 +77,11 @@ Before running this code, you must first sign up to the [Red List
 API](https://api.iucnredlist.org) to obtain an API token. You can view
 (and cycle) your token from your [account
 page](https://api.iucnredlist.org/users/edit).
+
+Initialize the client
+```
+import iucnredlistpy
+
+client = iucnredlistpy.IUCNRedListClient(api_key="your_red_list_api_key")
+client.get_biogeographical_realms()
+```
