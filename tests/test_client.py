@@ -3,7 +3,7 @@ import iucnredlistpy
 
 def test_get_biogeographical_realms(requests_mock):
     api_key = "fake-api-key"
-    client = iucnredlistpy.IUCNRedListClient(api_key=api_key)
+    client = iucnredlistpy.Client(api_key=api_key)
 
     mock_url = f"{client.API_BASE}biogeographical_realms"
     mock_response = {
@@ -21,5 +21,5 @@ def test_get_biogeographical_realms(requests_mock):
 
     requests_mock.get(mock_url, json=mock_response)
 
-    result = client.get_biogeographical_realms()
+    result = client.biogeographical_realms.all()
     assert result == mock_response

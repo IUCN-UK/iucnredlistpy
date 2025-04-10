@@ -1,3 +1,4 @@
-from .client import IUCNRedListClient
+from .client import Client
+from .resource import Resource
 
-__all__ = ["IUCNRedListClient"]
+__all__ = ["Resource", "Client"]
