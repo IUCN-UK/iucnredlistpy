@@ -9,6 +9,13 @@ class Client:
         self.session = self._initialize_session()
         self._define_resource_methods()
 
+    def get(self, url, params=None):
+        response = self.session.get(url, params=params)
+        if response.ok:
+            return response.json()
+        else:
+            raise Exception(f"API Error: {response.status_code} - {response.text}")
+
     def _define_resource_methods(self):
         for name in RESOURCE_NAMES:
 
