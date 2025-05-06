@@ -8,8 +8,4 @@ class Resource:
 
     def list(self):
         url = f"{API_BASE}{self.resource_name}"
-        response = self.client.session.get(url)
-        if response.ok:
-            return response.json()
-        else:
-            raise Exception(f"API Error: {response.status_code} - {response.text}")
+        return self.client.get(url)
