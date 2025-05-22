@@ -1,6 +1,7 @@
 import requests
 from .constants import RESOURCE_NAMES
 from .resource import Resource
+from .assessment import Assessment
 
 
 class Client:
@@ -8,6 +9,7 @@ class Client:
         self.api_key = api_key
         self.session = self._initialize_session()
         self._define_resource_methods()
+        self.assessment = Assessment(self)
 
     def get(self, url, params=None):
         response = self.session.get(url, params=params)
