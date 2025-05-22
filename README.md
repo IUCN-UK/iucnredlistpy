@@ -78,6 +78,11 @@ API](https://api.iucnredlist.org) to obtain an API token. You can view
 (and cycle) your token from your [account
 page](https://api.iucnredlist.org/users/edit).
 
+Open a Python REPL with e.g. `uv`:
+```
+uv run python
+```
+
 Initialize the client
 ```
 import iucnredlistpy

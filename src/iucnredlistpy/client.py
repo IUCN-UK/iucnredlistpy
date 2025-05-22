@@ -1,6 +1,7 @@
 import requests
 from .constants import RESOURCE_NAMES
 from .resource import Resource
+from .assessment import Assessment
 
 
 class Client:
@@ -8,7 +9,7 @@ class Client:
         self.api_key = api_key
         self.session = self._initialize_session()
         self._define_resource_methods()
-        self._assessment = None
+        self.assessment = Assessment(self)
 
     def get(self, url, params=None):
         response = self.session.get(url, params=params)
@@ -16,11 +17,6 @@ class Client:
             return response.json()
         else:
             raise Exception(f"API Error: {response.status_code} - {response.text}")
-
-    def assessment(self):
-        if self._assessment is None:
-            self._assessment = Assessment(client)
-        return self._assessment
 
     def _define_resource_methods(self):
         for name in RESOURCE_NAMES:

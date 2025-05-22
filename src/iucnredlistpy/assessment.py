@@ -5,6 +5,6 @@ class Assessment:
     def __init__(self, client):
         self.client = client
 
-    def find(id):
+    def find(self, id):
         url = f"{API_BASE}assessment/{id}"
         return self.client.get(url)
