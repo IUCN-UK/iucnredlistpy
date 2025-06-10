@@ -12,7 +12,7 @@ programmatic access to data including (but limited to); population size,
 habitat and ecology, trade and threats to help support informed
 conservation decisions.
 
-The iucnredlist R package aims to serve as a client library for the Red
+The iucnredlistpy Python package aims to serve as a client library for the Red
 List API, offering the research community and other users an efficient
 and user-friendly tool to access and interact with the vital data and
 services provided by the IUCN Red List.
