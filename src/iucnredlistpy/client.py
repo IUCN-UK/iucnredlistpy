@@ -2,6 +2,7 @@ import requests
 from .constants import RESOURCE_NAMES
 from .resource import Resource
 from .assessment import Assessment
+from .taxa import Taxa
 
 
 class Client:
@@ -10,6 +11,7 @@ class Client:
         self.session = self._initialize_session()
         self._define_resource_methods()
         self.assessment = Assessment(self)
+        self.taxa = Taxa(self)
 
     def get(self, url, params=None):
         response = self.session.get(url, params=params)
