@@ -9,3 +9,8 @@ class Resource:
     def list(self):
         url = f"{API_BASE}{self.resource_name}"
         return self.client.get(url)
+
+    def find(self, id, query={}):
+        url = f"{API_BASE}{self.resource_name}/{id}"
+
+        return self.client.get(url, query)

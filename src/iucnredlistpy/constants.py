@@ -17,3 +17,11 @@ RESOURCE_NAMES = [
     "threats",
     "use_and_trade",
 ]
+
+TAXA_LEVELS = [
+    "kingdom",
+    "phylum",
+    "class",
+    "order",
+    "family",
+]
